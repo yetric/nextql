@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "yarn workspace @nextql/client run build",
+    "start": "yarn workspace @nextql/server run start",
+    "dev": "export $(cat .env | xargs) && yarn workspace @nextql/server run dev"
   },
   "repository": {
     "type": "git",
@@ -12,9 +14,10 @@
   },
   "author": "",
   "license": "ISC",
+  "private": true,
   "bugs": {
     "url": "https://github.com/yetric/nextql/issues"
   },
   "homepage": "https://github.com/yetric/nextql#readme",
-  "workspaces": ["pacakges/*"]
+  "workspaces": ["packages/*"]
 }
